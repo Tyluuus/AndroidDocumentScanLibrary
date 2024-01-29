@@ -24,7 +24,7 @@
         android:id="@+id/InnerRelativeLayout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" >
+        >
 
         <Button
             android:id="@+id/doneButton"
@@ -42,7 +42,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_toBottomOf="@id/doneButton"
+        android:layout_toEndOf="@id/doneButton"
         >
         <Button
             android:id="@+id/original"
