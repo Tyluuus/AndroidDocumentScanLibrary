@@ -11,7 +11,8 @@
         android:layout_height="match_parent"
         android:stretchColumns="1">
 
-        <TableRow>
+        <TableRow
+            android:layout_gravity="center_horizontal">
         <Button
             android:id="@+id/doneButton"
             android:layout_width="fill_parent"
@@ -25,7 +26,8 @@
             />
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_gravity="center_horizontal">
     <LinearLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -109,7 +111,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/tableView"
+        android:layout_below="@id/tableView"
         android:layout_gravity="center"
         android:layout_margin="@dimen/scanPadding">
 
