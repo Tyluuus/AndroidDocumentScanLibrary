@@ -5,6 +5,21 @@
     android:background="@android:color/black"
     android:orientation="vertical">
 
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/scanPadding">
+
+        <ImageView
+            android:id="@+id/scannedImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/scanPadding" />
+    </FrameLayout>
+
     <TableLayout
         android:id="@+id/tableView"
         android:layout_width="wrap_content"
@@ -21,7 +36,6 @@
             android:layout_height="wrap_content"
             android:background="@color/primary"
             android:orientation="horizontal"
-            android:padding="@dimen/bottom_bar_padding"
             android:text="@string/done"
             android:textAppearance="@style/ButtonTextStyle"
             />
@@ -109,19 +123,7 @@
 
 
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/scanPadding">
 
-        <ImageView
-            android:id="@+id/scannedImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/scanPadding" />
-    </FrameLayout>
 
 
 </RelativeLayout>
