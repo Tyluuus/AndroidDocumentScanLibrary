@@ -88,7 +88,9 @@
         android:background="@color/primary"
         android:orientation="horizontal"
         android:padding="@dimen/bottom_bar_padding"
-        android:text="@string/done" />
+        android:text="@string/done"
+        android:textAppearance="@style/ButtonTextStyle"
+        />
 
 
     <FrameLayout
