@@ -1,1 +1,7 @@
 include ':app', ':scanlibrary'
+
+dependencyResolutionManagement{
+    repositories{
+        maven { url "https://jitpack.io" }
+    }
+}
