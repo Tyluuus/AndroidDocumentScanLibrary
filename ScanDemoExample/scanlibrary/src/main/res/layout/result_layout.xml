@@ -19,17 +19,17 @@
 
     <RelativeLayout
         android:id="@+id/InnerRelativeLayout"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" >
 
         <TableLayout
             android:id="@+id/tableView"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="bottom">
             <TableRow
-                android:gravity="center_horizontal"
-                android:layout_marginEnd="8dp">
+                android:gravity="center_horizontal">
                 <Button
                     android:id="@+id/doneButton"
                     android:layout_width="fill_parent"
@@ -44,7 +44,7 @@
                 android:gravity="center_horizontal">
                 <LinearLayout
                     android:id="@+id/toolbar"
-                    android:layout_width="match_parent"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical">
 
