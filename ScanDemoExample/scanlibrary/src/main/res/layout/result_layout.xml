@@ -20,6 +20,12 @@
             android:layout_margin="@dimen/scanPadding" />
     </FrameLayout>
 
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
     <TableLayout
         android:id="@+id/tableView"
         android:layout_width="wrap_content"
@@ -28,8 +34,7 @@
         android:layout_gravity="bottom">
 
         <TableRow
-            android:layout_gravity="center_horizontal"
-            android:layout_marginEnd="8dp">
+            android:layout_gravity="center_horizontal">
         <Button
             android:id="@+id/doneButton"
             android:layout_width="fill_parent"
@@ -116,14 +121,10 @@
             android:text="@string/rotate_right"
             android:textColor="@android:color/white" />
 
+
     </LinearLayout>
         </TableRow>
     </TableLayout>
-
-
-
-
-
-
+    </RelativeLayout>
 
 </RelativeLayout>
