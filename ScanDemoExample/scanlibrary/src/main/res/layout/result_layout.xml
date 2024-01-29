@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom">
             <TableRow
-                android:layout_gravity="center_horizontal">
+                android:gravity="center_horizontal">
                 <Button
                     android:id="@+id/doneButton"
                     android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                     />
             </TableRow>
             <TableRow
-                android:layout_gravity="center_horizontal">
+                android:gravity="center_horizontal">
                 <LinearLayout
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
