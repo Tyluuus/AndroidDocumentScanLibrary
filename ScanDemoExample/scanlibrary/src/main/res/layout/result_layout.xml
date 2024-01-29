@@ -31,7 +31,6 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@color/primary"
-            android:layout_alignParentBottom="true"
             android:orientation="horizontal"
             android:text="@string/done"
             android:textAppearance="@style/ButtonTextStyle"
