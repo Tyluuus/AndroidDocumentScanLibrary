@@ -5,6 +5,27 @@
     android:background="@android:color/black"
     android:orientation="vertical">
 
+    <TableLayout
+        android:id="@+id/tableView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        <TableRow>
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/primary"
+            android:orientation="horizontal"
+            android:padding="@dimen/bottom_bar_padding"
+            android:text="@string/done"
+            android:textAppearance="@style/ButtonTextStyle"
+            />
+        </TableRow>
+
+        <TableRow>
     <LinearLayout
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -79,25 +100,16 @@
             android:textColor="@android:color/white" />
 
     </LinearLayout>
+        </TableRow>
+    </TableLayout>
 
-    <Button
-        android:id="@+id/doneButton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/primary"
-        android:orientation="horizontal"
-        android:padding="@dimen/bottom_bar_padding"
-        android:text="@string/done"
-        android:textAppearance="@style/ButtonTextStyle"
-        />
+
 
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/doneButton"
-        android:layout_below="@id/toolbar"
+        android:layout_above="@id/tableView"
         android:layout_gravity="center"
         android:layout_margin="@dimen/scanPadding">
 
