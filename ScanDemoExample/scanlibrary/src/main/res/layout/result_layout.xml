@@ -16,18 +16,12 @@
             android:paddingRight="8dp"
             android:paddingLeft="8dp"
             android:paddingBottom="16dp">
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/scanPadding">
         <ImageView
             android:id="@+id/scannedImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="@dimen/scanPadding" />
-    </FrameLayout>
         </TableRow>
         <TableRow
             android:gravity="center_horizontal">
@@ -104,16 +98,17 @@
 
     <RelativeLayout
         android:id="@+id/InnerRelativeLayout"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" >
-
+        android:layout_alignParentBottom="true"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp" >
 
                 <Button
                     android:id="@+id/doneButton"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/primary"
+                    android:background="@drawable/bg_button"
                     android:orientation="horizontal"
                     android:text="@string/done"
                     android:textAppearance="@style/ButtonTextStyle"
