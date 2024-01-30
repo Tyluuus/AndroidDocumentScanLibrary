@@ -12,6 +12,8 @@ import android.os.Bundle;
 
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,16 +21,16 @@ import java.util.List;
 /**
  * Created by jhansi on 28/03/15.
  */
-public class ScanActivity extends Activity implements IScanner, ComponentCallbacks2 {
+public class ScanActivity extends Activity implements IScanner, ComponentCallbacks2, ScanActivityInterface {
 
     String[] permissions = new String[2];
-
+    Boolean isBacked = false;
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
 
-        this.finish();
+        isBacked = true;
     }
 
     @Override
@@ -47,6 +49,14 @@ public class ScanActivity extends Activity implements IScanner, ComponentCallbac
             getActionBar().hide();
         }
         checkPermissions();
+    }
+
+    public Boolean getIsBacked() {
+        return isBacked;
+    }
+
+    public void closeActiv() {
+        this.finish();
     }
 
     private void checkPermissions() {
@@ -181,3 +191,4 @@ public class ScanActivity extends Activity implements IScanner, ComponentCallbac
         System.loadLibrary("Scanner");
     }
 }
+

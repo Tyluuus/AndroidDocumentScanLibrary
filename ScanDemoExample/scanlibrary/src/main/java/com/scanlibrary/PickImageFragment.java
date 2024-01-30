@@ -41,6 +41,7 @@ public class PickImageFragment extends Fragment {
     private Uri fileUri;
     private IScanner scanner;
     private static final int MY_CAMERA_REQUEST_CODE = 100;
+    private ScanActivityInterface mListener;
 
     @Override
     public void onAttach(Activity activity) {
@@ -49,6 +50,23 @@ public class PickImageFragment extends Fragment {
             throw new ClassCastException("Activity must implement IScanner");
         }
         this.scanner = (IScanner) activity;
+
+        if (this instanceof ScanActivityInterface) {
+            mListener = (ScanActivityInterface) this;
+        } else {
+            throw new RuntimeException(this.toString()
+                    + " must implement YourActivityInterface");
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Boolean isBacked = mListener.getIsBacked();
+
+        if (isBacked) {
+            mListener.closeActiv();
+        }
     }
 
     @Override
