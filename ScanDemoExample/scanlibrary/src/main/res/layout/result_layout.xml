@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_margin="@dimen/scanPadding"
-            android:layout_marginBottom="100dp"
+            android:adjustViewBounds="true"
             android:paddingBottom="16dp"
             android:background="@color/orange"/>
 
