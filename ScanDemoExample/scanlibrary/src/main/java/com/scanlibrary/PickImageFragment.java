@@ -41,7 +41,6 @@ public class PickImageFragment extends Fragment {
     private Uri fileUri;
     private IScanner scanner;
     private static final int MY_CAMERA_REQUEST_CODE = 100;
-    private Boolean isBacked = false;
 
     @Override
     public void onAttach(Activity activity) {
@@ -56,11 +55,6 @@ public class PickImageFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-
-        Log.d("test", "RESJUME");
-//        if(isBacked) {
-//            getActivity().finish();
-//        }
     }
 
     @Override
@@ -72,13 +66,11 @@ public class PickImageFragment extends Fragment {
 
 
     private void init() {
-        Log.d("test", "INIT");
         cameraButton = (ImageButton) view.findViewById(R.id.cameraButton);
         cameraButton.setOnClickListener(new CameraButtonClickListener());
         galleryButton = (ImageButton) view.findViewById(R.id.selectButton);
         galleryButton.setOnClickListener(new GalleryClickListener());
         imagePath = getActivity().getApplicationContext().getExternalCacheDir().getPath() + "/scanSample";
-        isBacked = true;
         if (isIntentPreferenceSet()) {
             handleIntentPreference();
         } else {

@@ -29,6 +29,7 @@ public class ScanActivity extends Activity implements IScanner, ComponentCallbac
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        this.finish();
     }
 
 

@@ -56,8 +56,8 @@ public class ScanFragment extends Fragment {
         return view;
     }
 
-    public ScanFragment() {
 
+    public ScanFragment() {
     }
 
     private void init() {
