@@ -7,9 +7,10 @@
 
     <TableLayout
         android:id="@+id/tableView"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom">
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="36dp">
         <TableRow
             android:gravity="center_horizontal">
     <FrameLayout
