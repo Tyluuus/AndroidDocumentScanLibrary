@@ -5,24 +5,28 @@
     android:background="@android:color/black"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:id="@+id/InnerRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="24dp"
+        android:paddingLeft="24dp"
+        android:paddingBottom="16dp">
     <Button
         android:id="@+id/scanButton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:background="@drawable/bg_button"
         android:orientation="horizontal"
-        android:paddingRight="24dp"
-        android:paddingLeft="24dp"
-        android:paddingBottom="16dp"
         android:text="@string/scan"
         android:textAppearance="@style/ButtonTextStyle">
     </Button>
+    </RelativeLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/scanButton"
         android:layout_gravity="center"
         android:layout_margin="@dimen/scanPadding">
 
