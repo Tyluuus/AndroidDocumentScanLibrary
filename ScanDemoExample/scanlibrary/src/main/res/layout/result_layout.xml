@@ -28,7 +28,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="@colors/orange">
+                android:background="@color/orange">
 
                 <Button
                     android:id="@+id/original"
