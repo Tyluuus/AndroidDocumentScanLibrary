@@ -57,16 +57,13 @@ public class PickImageFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
-
+        if(isBacked) {
+            getActivity().finish();
+        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        Log.d("test", "kriejt wju");
-        Log.d("test", isBacked.toString());
-        if(isBacked) {
-            getActivity().finish();
-        }
         view = inflater.inflate(R.layout.pick_image_fragment, null);
         init();
         return view;
