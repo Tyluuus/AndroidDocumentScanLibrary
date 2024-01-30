@@ -57,9 +57,10 @@ public class PickImageFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
-        if(isBacked) {
-            getActivity().finish();
-        }
+        Log.d("test", "RESJUME");
+//        if(isBacked) {
+//            getActivity().finish();
+//        }
     }
 
     @Override
@@ -71,6 +72,7 @@ public class PickImageFragment extends Fragment {
 
 
     private void init() {
+        Log.d("test", "INIT");
         cameraButton = (ImageButton) view.findViewById(R.id.cameraButton);
         cameraButton.setOnClickListener(new CameraButtonClickListener());
         galleryButton = (ImageButton) view.findViewById(R.id.selectButton);
