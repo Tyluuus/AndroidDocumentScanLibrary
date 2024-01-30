@@ -10,11 +10,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginBottom="80dp">
+        android:layout_marginBottom="100dp">
         <TableRow
             android:gravity="center_horizontal"
-            android:paddingRight="8dp"
-            android:paddingLeft="8dp"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
             android:paddingBottom="16dp">
         <ImageView
             android:id="@+id/scannedImage"
@@ -27,7 +27,8 @@
             <LinearLayout
                 android:id="@+id/toolbar"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@colors/orange">
 
                 <Button
                     android:id="@+id/original"
@@ -99,8 +100,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:paddingRight="16dp"
-        android:paddingLeft="16dp" >
+        android:paddingRight="24dp"
+        android:paddingLeft="24dp"
+        android:paddingBottom="16dp">
 
                 <Button
                     android:id="@+id/doneButton"
