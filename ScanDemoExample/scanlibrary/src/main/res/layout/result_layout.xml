@@ -8,6 +8,7 @@
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_gravity="center"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:background="@android:color/black"
@@ -19,9 +20,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_margin="@dimen/scanPadding"
-            android:layout_gravity="center"
+
             android:adjustViewBounds="true"
-            android:paddingBottom="16dp"
             />
 
             <LinearLayout
