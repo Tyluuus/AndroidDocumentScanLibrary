@@ -4,6 +4,14 @@
     android:layout_height="match_parent"
     android:background="@android:color/black"
     android:orientation="vertical">
+
+    <TableLayout
+        android:id="@+id/tableView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+        <TableRow
+            android:gravity="center_horizontal">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,6 +24,79 @@
             android:layout_gravity="center"
             android:layout_margin="@dimen/scanPadding" />
     </FrameLayout>
+        </TableRow>
+        <TableRow
+            android:gravity="center_horizontal">
+            <LinearLayout
+                android:id="@+id/toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/original"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_image"
+                    android:text="@string/label_org"
+                    android:textColor="@android:color/white" />
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/magicColor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_enhamce_image"
+                    android:singleLine="true"
+                    android:text="@string/label_magic"
+                    android:textColor="@android:color/white" />
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/grayMode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_gray"
+                    android:singleLine="true"
+                    android:text="@string/label_gray"
+                    android:textColor="@android:color/white" />
+                <Button
+                    android:id="@+id/BWMode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_black_and_white"
+                    android:singleLine="true"
+                    android:text="@string/label_b_amp_w"
+                    android:textColor="@android:color/white" />
+                <Button
+                    android:id="@+id/rotanticButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_rotac"
+                    android:singleLine="true"
+                    android:text="@string/rotate_left"
+                    android:textColor="@android:color/white" />
+                <Button
+                    android:id="@+id/rotcButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/ic_rotc"
+                    android:singleLine="true"
+                    android:text="@string/rotate_right"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
 
     <RelativeLayout
         android:id="@+id/InnerRelativeLayout"
@@ -23,13 +104,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true" >
 
-        <TableLayout
-            android:id="@+id/tableView"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom">
-            <TableRow
-                android:gravity="center_horizontal">
+
                 <Button
                     android:id="@+id/doneButton"
                     android:layout_width="fill_parent"
@@ -39,78 +114,7 @@
                     android:text="@string/done"
                     android:textAppearance="@style/ButtonTextStyle"
                     />
-            </TableRow>
-            <TableRow
-                android:gravity="center_horizontal">
-                <LinearLayout
-                    android:id="@+id/toolbar"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
 
-                    <Button
-                        android:id="@+id/original"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_image"
-                        android:text="@string/label_org"
-                        android:textColor="@android:color/white" />
-                    <Button
-                        android:visibility="gone"
-                        android:id="@+id/magicColor"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_enhamce_image"
-                        android:singleLine="true"
-                        android:text="@string/label_magic"
-                        android:textColor="@android:color/white" />
-                    <Button
-                        android:visibility="gone"
-                        android:id="@+id/grayMode"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_gray"
-                        android:singleLine="true"
-                        android:text="@string/label_gray"
-                        android:textColor="@android:color/white" />
-                    <Button
-                        android:id="@+id/BWMode"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_black_and_white"
-                        android:singleLine="true"
-                        android:text="@string/label_b_amp_w"
-                        android:textColor="@android:color/white" />
-                    <Button
-                        android:id="@+id/rotanticButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_rotac"
-                        android:singleLine="true"
-                        android:text="@string/rotate_left"
-                        android:textColor="@android:color/white" />
-                    <Button
-                        android:id="@+id/rotcButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@android:color/transparent"
-                        android:drawableTop="@drawable/ic_rotc"
-                        android:singleLine="true"
-                        android:text="@string/rotate_right"
-                        android:textColor="@android:color/white" />
-                </LinearLayout>
-            </TableRow>
-        </TableLayout>
+
     </RelativeLayout>
 </RelativeLayout>
