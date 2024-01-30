@@ -51,12 +51,18 @@ public class PickImageFragment extends Fragment {
         this.scanner = (IScanner) activity;
     }
 
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        view = inflater.inflate(R.layout.pick_image_fragment, null);
-//        init();
-//        return view;
-//    }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.pick_image_fragment, null);
+        init();
+        return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getActivity().finish();
+    }
 
     private void init() {
         cameraButton = (ImageButton) view.findViewById(R.id.cameraButton);
@@ -70,6 +76,7 @@ public class PickImageFragment extends Fragment {
             getActivity().finish();
         }
     }
+
 
     private void clearTempImages() {
         try {
