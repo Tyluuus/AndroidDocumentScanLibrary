@@ -24,9 +24,8 @@
             <LinearLayout
                 android:id="@+id/toolbar"
                 android:layout_width="fill_parent"
-                android:gravity="bottom"
                 android:layout_height="wrap_content"
-                android:background="@color/orange"
+                android:background="@android:color/transparent"
                 android:layout_below="@+id/scannedImage">
 
                 <Button
