@@ -9,7 +9,6 @@
         android:id="@+id/tableView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginBottom="100dp">
         <TableRow
             android:gravity="center_horizontal"
@@ -23,7 +22,9 @@
             android:layout_gravity="center"
             android:layout_margin="@dimen/scanPadding" />
         </TableRow>
-        <TableRow>
+        <TableRow
+            android:gravity="center_horizontal"
+            android:paddingTop="16dp">
             <LinearLayout
                 android:id="@+id/toolbar"
                 android:layout_width="fill_parent"
