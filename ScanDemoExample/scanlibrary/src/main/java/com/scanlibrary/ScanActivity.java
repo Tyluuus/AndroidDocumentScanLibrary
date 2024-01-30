@@ -21,17 +21,16 @@ import java.util.List;
 /**
  * Created by jhansi on 28/03/15.
  */
-public class ScanActivity extends Activity implements IScanner, ComponentCallbacks2, ScanActivityInterface {
+public class ScanActivity extends Activity implements IScanner, ComponentCallbacks2 {
 
     String[] permissions = new String[2];
-    Boolean isBacked = false;
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-
-        isBacked = true;
     }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,13 +50,6 @@ public class ScanActivity extends Activity implements IScanner, ComponentCallbac
         checkPermissions();
     }
 
-    public Boolean getIsBacked() {
-        return isBacked;
-    }
-
-    public void closeActiv() {
-        this.finish();
-    }
 
     private void checkPermissions() {
         List<String> listPermissionsNeeded = new ArrayList<>();

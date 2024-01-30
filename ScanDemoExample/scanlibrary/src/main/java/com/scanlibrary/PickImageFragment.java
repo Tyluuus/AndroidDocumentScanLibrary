@@ -41,7 +41,7 @@ public class PickImageFragment extends Fragment {
     private Uri fileUri;
     private IScanner scanner;
     private static final int MY_CAMERA_REQUEST_CODE = 100;
-    private ScanActivityInterface mListener;
+    private Boolean isBacked = false;
 
     @Override
     public void onAttach(Activity activity) {
@@ -51,26 +51,20 @@ public class PickImageFragment extends Fragment {
         }
         this.scanner = (IScanner) activity;
 
-        if (this instanceof ScanActivityInterface) {
-            mListener = (ScanActivityInterface) this;
-        } else {
-            throw new RuntimeException(this.toString()
-                    + " must implement YourActivityInterface");
-        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        Boolean isBacked = mListener.getIsBacked();
 
-        if (isBacked) {
-            mListener.closeActiv();
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        if(isBacked) {
+            getActivity().finish();
+        }
         view = inflater.inflate(R.layout.pick_image_fragment, null);
         init();
         return view;
@@ -83,6 +77,7 @@ public class PickImageFragment extends Fragment {
         galleryButton = (ImageButton) view.findViewById(R.id.selectButton);
         galleryButton.setOnClickListener(new GalleryClickListener());
         imagePath = getActivity().getApplicationContext().getExternalCacheDir().getPath() + "/scanSample";
+        isBacked = true;
         if (isIntentPreferenceSet()) {
             handleIntentPreference();
         } else {
