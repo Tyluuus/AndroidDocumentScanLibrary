@@ -58,11 +58,6 @@ public class PickImageFragment extends Fragment {
         return view;
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        getActivity().finish();
-    }
 
     private void init() {
         cameraButton = (ImageButton) view.findViewById(R.id.cameraButton);

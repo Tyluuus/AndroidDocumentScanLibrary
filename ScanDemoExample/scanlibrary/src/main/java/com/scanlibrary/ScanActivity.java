@@ -23,6 +23,14 @@ public class ScanActivity extends Activity implements IScanner, ComponentCallbac
 
     String[] permissions = new String[2];
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        this.finish();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
