@@ -62,6 +62,8 @@ public class PickImageFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.d("test", "kriejt wju");
+        Log.d("test", isBacked.toString());
         if(isBacked) {
             getActivity().finish();
         }
