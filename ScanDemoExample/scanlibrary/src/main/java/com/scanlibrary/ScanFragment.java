@@ -68,7 +68,7 @@ public class ScanFragment extends Fragment {
             scanButton.setText(getActivity().getIntent().getStringExtra(ScanConstants.SCAN_NEXT_TEXT));
         }
         scanCloseButton = (Button) view.findViewById(R.id.scanCloseButton);
-        scanCloseButton.setOnClickListener(new CloseButtonClickListener());
+        scanCloseButton.setOnClickListener(new ScanCloseButtonClickListener());
         scanButton.setOnClickListener(new ScanButtonClickListener());
         sourceFrame = (FrameLayout) view.findViewById(R.id.sourceFrame);
         polygonView = (PolygonView) view.findViewById(R.id.polygonView);
@@ -83,7 +83,7 @@ public class ScanFragment extends Fragment {
         });
     }
 
-    private class CloseButtonClickListener implements View.OnClickListener {
+    private class ScanCloseButtonClickListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
             getActivity().finish();
