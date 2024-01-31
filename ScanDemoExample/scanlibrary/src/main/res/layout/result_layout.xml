@@ -21,6 +21,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:icon="@drawable/ic_baseline_close_24"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            android:theme="@style/Widget.Material3.Button.IconButton"
             />
     </RelativeLayout>
 
