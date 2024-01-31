@@ -27,6 +27,7 @@ public class ResultFragment extends Fragment {
     private Bitmap original;
     private Button originalButton;
     private Button MagicColorButton;
+    private Button CloseButton;
     private Button grayModeButton;
     private Button bwButton;
     private Button rotanticButton;
@@ -52,6 +53,8 @@ public class ResultFragment extends Fragment {
             originalButton.setText(getActivity().getIntent().getStringExtra(ScanConstants.SCAN_ORG_TEXT));
         }
         originalButton.setOnClickListener(new OriginalButtonClickListener());
+        CloseButton = (Button) view.findViewById(R.id.closeButton);
+        CloseButton.setOnClickListener(new CloseButtonClickListener());
         MagicColorButton = (Button) view.findViewById(R.id.magicColor);
         MagicColorButton.setOnClickListener(new MagicColorButtonClickListener());
         grayModeButton = (Button) view.findViewById(R.id.grayMode);
@@ -139,6 +142,13 @@ public class ResultFragment extends Fragment {
                     }
                 }
             });
+        }
+    }
+
+    private class CloseButtonClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            getActivity().finish();
         }
     }
 
