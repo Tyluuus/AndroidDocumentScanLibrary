@@ -32,6 +32,7 @@ import java.util.Map;
 public class ScanFragment extends Fragment {
 
     private Button scanButton;
+    private Button scanCloseButton;
     private ImageView sourceImageView;
     private FrameLayout sourceFrame;
     private PolygonView polygonView;
@@ -66,6 +67,8 @@ public class ScanFragment extends Fragment {
         if (getActivity().getIntent().getStringExtra(ScanConstants.SCAN_NEXT_TEXT) != null) {
             scanButton.setText(getActivity().getIntent().getStringExtra(ScanConstants.SCAN_NEXT_TEXT));
         }
+        scanCloseButton = (Button) view.findViewById(R.id.scanCloseButton);
+        scanCloseButton.setOnClickListener(new CloseButtonClickListener());
         scanButton.setOnClickListener(new ScanButtonClickListener());
         sourceFrame = (FrameLayout) view.findViewById(R.id.sourceFrame);
         polygonView = (PolygonView) view.findViewById(R.id.polygonView);
@@ -78,6 +81,13 @@ public class ScanFragment extends Fragment {
                 }
             }
         });
+    }
+
+    private class CloseButtonClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View v) {
+            getActivity().finish();
+        }
     }
 
     private Bitmap getBitmap() {
